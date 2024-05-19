@@ -1,0 +1,39 @@
+<!-- Header section -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">BalberTube</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" *ngIf="isSpecialRoute()">
+          <a class="nav-link" routerLink="" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/upload" routerLinkActive="active">Upload</a>
+        </li>
+        <li class="nav-item" *ngIf="!(afAuth.user | async)">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!(afAuth.user | async)">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="afAuth.user | async as user">
+          <button class="btn btn-secondary nav-link" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,7 @@
+<button (click)="deleteAllData()">Delete Every Video</button>
+<div *ngFor="let video of videos | async">
+  <video width="100%" controls>
+    <source [src]="video" type="video/mp4">
+  </video>
+  <button (click)="shareVideo(video)">Share</button>
+</div>

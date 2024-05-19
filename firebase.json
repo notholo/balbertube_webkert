@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    
+    "public": "dist/balbertubebeadando/browser",
+    "ignore": [
+      
+      "**/.*"
+      
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

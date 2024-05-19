@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Háttérszín */
+  display: flex;
+  justify-content: center; /* Vízszintes középre igazítás */
+  align-items: center; /* Függőleges középre igazítás */
+  height: 100vh; /* Teljes képernyős magasság */
+}
+
+.container {
+  max-width: 800px; /* Maximális szélesség */
+  padding: 20px;
+  background-color: #fff; /* Tartalom háttérszín */
+  border-radius: 10px; /* Kerekített sarok */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Árnyék */
+}
+
+/* Stílus a file kiválasztó gombhoz */
+.custom-file-upload {
+  display: inline-block;
+  background-color: #007bff; /* Gomb háttérszíne */
+  color: #fff; /* Szöveg színe */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px; /* Kerekített sarok */
+}
+
+/* Stílus a file kiválasztó inputhoz */
+#fileInput {
+  display: none; /* Rejtett input */
+}
+
+/* Stílus a feltöltés gombhoz */
+button {
+  display: inline-block;
+  background-color: #28a745; /* Gomb háttérszíne */
+  color: #fff; /* Szöveg színe */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px; /* Kerekített sarok */
+  margin-left: 10px; /* Margó bal oldalt */
+}
+
+/* Stílus az upload progresszhoz */
+.progress {
+  margin-top: 20px; /* Margó felülre */
+}
+
+/* Stílus a feltöltött videó URL-hez */
+.uploaded-url {
+  margin-top: 20px; /* Margó felülre */
+}
+
+.uploaded-url a {
+  color: #007bff; /* Link színe */
+  text-decoration: none; /* Aláhúzás eltávolítása */
+}

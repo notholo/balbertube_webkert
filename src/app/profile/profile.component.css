@@ -1,0 +1,47 @@
+button {
+    background-color: #4CAF50; /* Zöld háttérszín */
+    color: white; /* Fehér szövegszín */
+    border: none; /* Keret eltávolítása */
+    padding: 10px 20px; /* Belső tér a gomb körül */
+    text-align: center; /* Szöveg középre igazítása */
+    text-decoration: none; /* Aláhúzás eltávolítása */
+    display: inline-block; /* Inline elemként kezelés */
+    font-size: 16px; /* Betűméret */
+    margin: 5px; /* Margó a gomb körül */
+    cursor: pointer; /* Mutató húzása gombra */
+    border-radius: 5px; /* Kerekített sarok */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Sötétebb zöld háttérszín a hoveren */
+  }
+  
+  /* Videók formázása */
+  video {
+    width: 33%; /* 33%-os szélességű videó */
+    display: block; /* Blokk elemként kezelés */
+    margin: 0 auto 10px; /* Középre igazítás, 10px margó alulra */
+    border: 2px solid #ccc; /* Körvonal a videónak */
+    border-radius: 5px; /* Kerekített sarok */
+  }
+  
+  /* Share gomb formázása */
+  button.share-button {
+    width: 33%; /* 33%-os szélességű gomb */
+    background-color: #4CAF50; /* Zöld háttérszín */
+    color: white; /* Fehér szövegszín */
+    margin: 0 auto 10px; /* Középre igazítás, 10px margó alulra */
+    border: 2px solid #ccc; /* Körvonal a videónak */
+    border-radius: 5px; /* Kerekített sarok */
+  }
+  
+  /* Delete gomb formázása */
+  button.delete-button {
+    width: 33%; /* 33%-os szélességű gomb */
+    background-color: #f44336; /* Piros háttérszín */
+    margin-left: 67%; /* Jobb oldalra igazítás */
+  }
+  
+  button.delete-button:hover {
+    background-color: #d32f2f; /* Sötétebb piros háttérszín a hoveren */
+  }

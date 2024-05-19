@@ -1,0 +1,19 @@
+<!-- Label for file input acting as a button -->
+<label for="fileInput" class="custom-file-upload">
+  Choose File
+</label>
+<!-- Input for file selection -->
+<input id="fileInput" #fileInputElement type="file" (change)="handleFileInput($event)"/>
+
+<!-- Button to trigger the upload -->
+<button (click)="uploadFile()">Upload to Firebase</button>
+
+<!-- Display upload progress -->
+<div *ngIf="uploadProgress | async as progress">
+  Progress: {{ progress }}%
+</div>
+
+<!-- Display the uploaded video URL -->
+<div *ngIf="uploadedVideoUrl">
+  Uploaded Video URL: <a [href]="uploadedVideoUrl" target="_blank">{{ uploadedVideoUrl }}</a>
+</div>

@@ -1,0 +1,58 @@
+<mat-card>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email">
+      <mat-error *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+        <div *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</div>
+        <div *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email format</div>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-error *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+        <div *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</div>
+        <div *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</div>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" formControlName="confirmPassword">
+      <mat-error *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched">
+        Confirm Password is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+      <mat-error *ngIf="registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched">
+        Gender is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="agreeToTerms">
+      I agree to the terms and conditions
+    </mat-checkbox>
+    <mat-error *ngIf="registerForm.get('agreeToTerms')?.invalid && registerForm.get('agreeToTerms')?.touched">
+      You must agree to the terms and conditions
+    </mat-error>
+
+    <mat-slide-toggle formControlName="notifications">
+      Receive notifications
+    </mat-slide-toggle>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Register</button>
+
+    <mat-error *ngIf="error" class="text-danger mt-3">
+      {{ error }}
+    </mat-error>
+  </form>
+</mat-card>
