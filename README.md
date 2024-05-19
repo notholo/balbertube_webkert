@@ -1,3 +1,4 @@
+elérhetőség: discord:holo#8158
 Pontozási segédlet
 
 fordítási hiba : nincs 1/1,
